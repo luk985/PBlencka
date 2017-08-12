@@ -1,0 +1,58 @@
+@ font-face
+{
+	font-family: "Oswald"
+	srs: url(Fonts/fonts-oswald/Oswald-Regular.otf);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    text-decoration: none;
+    color: Black;
+    font-family: Oswald;
+}
+
+body
+{
+	background-color: White;
+}
+
+#centered
+{
+	margin: 0px auto; /*wyśrodkowanie elementu*/
+	width: 1264px; /*ustawienie sztywnej szerokości kontenera*/
+	height: 2000px;
+	background: YELLOW;
+}
+
+    #menu
+    {
+        margin-right: 0px auto;
+        margin-left: 0px auto;
+        height: 30px; /* wysokość kontenera */
+        position: relative; /* pozycja relatywna */
+        background: WHITE;
+    }
+        
+        #menu_left ul li
+        {
+            text-align:left;
+            float: left;
+            height: 30px; /* wysokość kontenera */
+            background:White;
+            font-family: Oswald;
+            display: inline;
+            font-size: 28px;
+            margin-right: 70px;
+        }
+        #menu_center ul li
+        {
+            text-align:left;
+            height: 20px; /* wysokość kontenera */
+            float: left;
+            background: WHITE;
+            display: inline;
+            margin-top: 7px;
+            margin-left: 30px;
+        }

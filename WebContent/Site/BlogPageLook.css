@@ -1,0 +1,173 @@
+@ font-face
+{
+	font-family: "Czcionka1"
+	srs: url("Fonts\SEGOESCB.TTF");
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    text-decoration: none;
+    color: black;
+    font-family: "Times New Roman";
+}
+
+
+body
+{
+	background-color: White;
+}
+
+#centered
+{
+	margin: 0px auto; /*wyśrodkowanie elementu*/
+	width: 956px; /*ustawienie sztywnej szerokości kontenera*/
+	height: 2000px;
+}
+    /* --- Nagłówek strony z podstawowywmi odnośnikami --- */ 
+    
+    #menu
+    {
+	    margin-right: 0px auto;
+        margin-left: 0px auto;
+        height: 35px; /* wysokość kontenera */
+        position: relative; /* pozycja relatywna */
+        background: WHITE;
+    }
+        
+        #menu_left1 h1
+        {
+            text-align:left;
+            float: left;
+            height: 35px; /* wysokość kontenera */
+            font-family: "Monotype Corsiva";
+            color: black;
+            display: inline;
+            font-size: 35px;
+            margin-right: 5px;
+        }
+        #menu_left2 h1
+        {
+            text-align:left;
+            float: left;
+            height: 35px; /* wysokość kontenera */
+            font-family: "Monotype Corsiva";
+            color: black;
+            display: inline;
+            font-size: 35px;
+            margin-right: 5px;
+        }
+        #menu_left3 h1
+        {
+            text-align:left;
+            float: left;
+            height: 35px; /* wysokość kontenera */
+            font-family: "Monotype Corsiva";
+            color: #A8A8A8;
+            display: inline;
+            font-size: 35px;
+            margin-right: 70px;
+        }
+        #menu_center ul li
+        {
+            text-align:left;
+            height: 20px; /* wysokość kontenera */
+            float: left;
+            background: WHITE;
+            display: inline;
+            margin-top: 7px;
+            margin-left: 35px;
+        }
+        
+         #menu_center a
+         {
+            color: black;
+            font-family: "Arial";
+            font-size: 13px;
+         }
+
+    #logoBlog
+    {
+        height: 200px; /* wysokość kontenera */
+        background: WHITE;
+    }
+    
+    /* --- Przeglądarka tematów --- */ 
+    
+    #firstSlider
+    {
+        height: 600px; /* wysokość kontenera */
+        position: relative;
+    }
+    
+        #imageSlider
+        {
+            height: 600px;
+            position: absolute;
+            overflow:hidden;
+            margin: auto;
+            left:0;
+            right:0;
+            z-index:1;
+            
+        }
+        
+
+        #leftHolder
+        {
+            height: 600px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            background: BLUE;
+            z-index:2;
+            
+
+        }
+        
+        #rightHolder
+        {
+            widht: 300px;
+            height: 600px;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            background: GREEN;
+            z-index:2;
+            
+            
+        }
+        
+        .left
+        {
+        height: 50px;
+        widht: 50px;
+        position: absolute;
+        top: 45%;
+        left: 10px;
+        
+        }
+        
+        .right
+        {
+        height: 50px;
+        widht: 50px;
+        position: absolute;
+        top: 45%;
+        right: 10px;
+        }
+        
+        .imageSlider
+        {
+            height: 600px;
+            position: absolute;
+            overflow:hidden;
+            margin: auto;
+            left:0;
+            right:0;
+            z-index:1;
+            
+        }
+        
+        }
