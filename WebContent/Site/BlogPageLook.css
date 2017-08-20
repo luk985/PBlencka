@@ -22,7 +22,7 @@ body
 #centered
 {
 	margin: 0px auto; /*wyśrodkowanie elementu*/
-	width: 956px; /*ustawienie sztywnej szerokości kontenera*/
+	width: 1039px; /*ustawienie sztywnej szerokości kontenera*/
 	height: 2000px;
 }
     /* --- Nagłówek strony z podstawowywmi odnośnikami --- */ 
@@ -77,7 +77,7 @@ body
             background: WHITE;
             display: inline;
             margin-top: 7px;
-            margin-left: 35px;
+            margin-left: 45px;
         }
         
          #menu_center a
@@ -163,6 +163,7 @@ body
             height: 600px;
             position: absolute;
             overflow:hidden;
+            visibility: visible;
             margin: auto;
             left:0;
             right:0;
@@ -170,4 +171,42 @@ body
             
         }
         
+        .imageSliderHidden
+        {
+            height: 600px;
+            position: absolute;
+            overflow:hidden;
+            visibility: hidden;
+            margin: auto;
+            left:0;
+            right:0;
+            z-index:1;
+            
         }
+  
+      /* --- Tekst nowego tematu --- */       
+	#textAndInformation
+	{
+	margin: 0px auto; /*wyśrodkowanie elementu*/
+	height: auto;
+	}
+	
+	#text
+	{
+	float:left;
+    margin-right: 20px auto;
+	width: 70%;
+	height: auto;
+	background: RED;
+	}
+	
+	#information
+	{
+	margin-left: 20px auto;
+	float:left;
+	width: 30%;
+	height: auto;
+	background: BLUE;
+	}
+     
+     

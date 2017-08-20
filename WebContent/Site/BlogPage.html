@@ -5,14 +5,15 @@
         <link rel="stylesheet" href="BlogPageLook.css" type="text/css"/>
         <link rel="stylsheet" href="BlogPage.js"/>
         <title>Patrycja Blencka - Blog</title>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="../Library/jquery-3.2.1.min.js"></script>
         <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
         <script src=BlogPage.js>
+        
         
         </script>
    </head>
    
-    <body onLoad="slideA()">
+    <body>
         <div id="centered">
             <div id="menu">
                 <div id="menu_left1">
@@ -40,9 +41,19 @@
                 <div id="leftHolder"><img onClick="slide(-1)" class="left" src="../Image/signLeft.png"/></div>
                 <div id="rightHolder"><img onClick="slide(1)" class="right" src="../Image/signRight.png"/></div>
                 <div id="imageSlider">
-                    <img src="../Threads/1.jpg" class="imageSlider"/>
-                </div>
-              
+                    <script>
+                    	ReadImage();
+                    </script>
+                </div>  
+            </div>
+            <div id = "textAndInformation">
+            	<div id = "text">
+            		<p>text</p>
+            	</div>
+
+            	<div id = "information">
+            		<p>text</p>
+            	</div>
             </div>
 
         </div>
