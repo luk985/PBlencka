@@ -89,9 +89,32 @@ body
 
     #logoBlog
     {
-        height: 200px; /* wysokość kontenera */
+        height: 180px; /* wysokość kontenera */
         background: WHITE;
+        
     }
+    
+    #logoBlogTekst1
+    {
+    	margin-top: 50px;
+    	text-align:center;
+        height: 200 px; /* wysokość kontenera */
+        font-family: "Monotype Corsiva";
+        color: black;
+        font-size: 26px;
+        line-height: 150%;
+    }
+        #logoBlogTekst2
+    {
+    	margin-top: 10px;
+    	text-align:center;
+        height: 200 px; /* wysokość kontenera */
+        font-family: "Monotype Corsiva";
+        color: black;
+        font-size: 18px;
+        line-height: 150%;
+    }
+    
     
     /* --- Przeglądarka tematów --- */ 
     
@@ -191,7 +214,7 @@ body
 	height: auto;
 	}
 	
-	#text
+	#textBlog
 	{
 	float:left;
     margin-right: 20px auto;
@@ -206,7 +229,38 @@ body
 	float:left;
 	width: 30%;
 	height: auto;
-	background: BLUE;
+	background: WHITE;
 	}
+	
+		#AutorPhoto
+    	{
+        	
+        	position: relative;
+        	top: 20px;
+        	height: 200px; /* wysokość kontenera */
+        	
+    	}
+    	
+		.AutorPhotoImg
+        {
+            right: 0px;
+            left: 0px;
+            height: 175px;
+            border-radius: 50%;
+            display: block;
+    		margin-left: auto;
+    		margin-right: auto
+        }
+        
+       	#AboutMeText
+    	{
+    	margin-top: 10px;
+    	text-align:center;
+        height: 200 px; /* wysoko�� kontenera */
+        font-family: "Monotype Corsiva";
+        color: black;
+        font-size: 16px;
+        line-height: 150%;
+    	}
      
      

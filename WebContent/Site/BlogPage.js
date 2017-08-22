@@ -5,6 +5,7 @@ if (typeof jQuery == 'undefined') {
 
 
 var LastNumberOfThreads = 5; //Numer ostatniego wprowadzonego tematu
+var timeChangeSlide = 600;
 
 
 var imageSlider = [
@@ -37,7 +38,7 @@ console.log($("#imageSlider").length);
 
 
 
-var imagecount = imageSlider.length-1;
+var imagecount = 0;
 console.log("imagecount: " + imagecount);
 var timer1=2000;
 
@@ -47,77 +48,51 @@ var timer1=2000;
 function slide(x)
 {	
 	var selectImage = document.getElementById("imageSlider").getElementsByTagName("img");
-	hideSlide();
-	selectImage[imagecount].className = "imageSliderHidden";
-	imagecount = imagecount+x;
-	if(imagecount > imageSlider.length-1)
-	{
-		imagecount = 0;
-    }
-    if(imagecount < 0)
-    {
-    	imagecount = imageSlider.length-1;
-    }
-    selectImage[imagecount].className="imageSlider";
-    showSlide();
-    console.log(imagecount);
-    
+	//hideSlide();
+	$("#imageSlider").fadeOut(timeChangeSlide,function(){
+		selectImage[imagecount].className = "imageSliderHidden";
+		imagecount = imagecount+x;
+		if(imagecount > imageSlider.length-1)
+		{
+			imagecount = 0;
+	    }
+	    if(imagecount < 0)
+	    {
+	    	imagecount = imageSlider.length-1;
+	    }
+	    selectImage[imagecount].className="imageSlider";
+	    $("#imageSlider").fadeIn(timeChangeSlide);
+	});
 }
 
-function hideSlide()
-{
-	$("#imageSlider").fadeOut(1500);
-}
-
-function showSlide()
-{
-	$("#imageSlider").fadeIn(1500);
-	
-}
-/*
 //Automatyczne przełączanie slajdu
 window.setInterval(function slideA()
-{
-	imagecount = imagecount+1;
-	if(imagecount > total)
-	{
-		imagecount = 0;
-    }
-    if(imagecount < 0)
-    {
-    	imagecount = total;
-    }
-    
-    //hideSlide();
-    //document.getElementById('imageSlider').style.display="none";
-    //document.getElementById('imageSlider').src=imageSlider[imagecount];
-    //document.getElementById('imageSlider').style.display="block";
-    //showSlide();
-    
+{	
+	var selectImage = document.getElementById("imageSlider").getElementsByTagName("img");
+	$("#imageSlider").fadeOut(timeChangeSlide,function(){
+		selectImage[imagecount].className = "imageSliderHidden";
+		imagecount++;
+		if(imagecount > imageSlider.length-1)
+		{
+			imagecount = 0;
+	    }
+	    if(imagecount < 0)
+	    {
+	    	imagecount = imageSlider.length-1;
+	    }
+	    selectImage[imagecount].className="imageSlider";
+	    $("#imageSlider").fadeIn(timeChangeSlide);
+	});
+},10000)
+
+function ReadText(){
+	console.log("../Threads/" + imageSlider.length +".txt");
+	//var TextBlog = loadStrings("../Threads/" + imageSlider.length +".txt");
+	jQuery.get('5.txt', function(txt){
+		$('TextBlog').children('p').text(text);
+	});
+	//document.getElementById("TextBlog").getElementsByTagName("p").innetHtlm = TextBlog;
 	
-},5000)
-*/
+}
 
 
-
-/*
-window.setInterval(function slideA(x)
-{
-	
-    imagecount = imagecount+1;
-    if(imagecount > total)
-    {
-    	imagecount = 1;
-    }
-    if(imagecount < 1)
-    {
-    	imagecount = 5;
-    }
-    //var fileImagePatch = "<img src =\" ../Threads/" + imagecount + ".jpg\"/>";
-    
-    document.getElementById('imageSlider').innerHTML = imageSlider2;
-    
-    
-    },3000);
-	
-*/
