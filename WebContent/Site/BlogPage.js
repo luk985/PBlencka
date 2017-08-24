@@ -1,7 +1,7 @@
 if (typeof jQuery == 'undefined') {
-	console.log("jQuery load");
-} else
 	console.log("jQuery no load");
+} else
+	console.log("jQuery load");
 
 
 var LastNumberOfThreads = 5; //Numer ostatniego wprowadzonego tematu
@@ -82,17 +82,50 @@ window.setInterval(function slideA()
 	    }
 	    selectImage[imagecount].className="imageSlider";
 	    $("#imageSlider").fadeIn(timeChangeSlide);
+	    
 	});
 },10000)
 
+
 function ReadText(){
 	console.log("../Threads/" + imageSlider.length +".txt");
-	//var TextBlog = loadStrings("../Threads/" + imageSlider.length +".txt");
-	jQuery.get('5.txt', function(txt){
-		$('TextBlog').children('p').text(text);
+	
+	var newImg 	= document.createElement("img");
+	newImg.setAttribute("src", "../Threads/"+ LastNumberOfThreads +".jpg");
+	newImg.setAttribute("class", "TopicImage");
+	document.getElementById("MainTopicImage").appendChild(newImg);
+	
+	//$("#textBlogTopic").load("FirstPage.html");
+	
+	
+	
+}	
+
+$(document).ready(function(){
+	$.get("header.html", function(data){
+		$("#header").html(data);	
 	});
+});
+	
+	/*
+	var txtFile = "../Threads/1.txt";
+	var file = new File([""], txtFile);
+	file.open("r");
+	var str = "";
+	while(!file.eof) {
+		str += file.readln() + "\n";
+	}
+	file.close();
+	alert(str);
+	*/
+	
+	//newImg.setAttribute("class", "imageSliderHidden");
+	
+	//var TextBlog = loadStrings("../Threads/" + imageSlider.length +".txt");
+	//$("#textBlog").load("FirstPage.html");
+	
 	//document.getElementById("TextBlog").getElementsByTagName("p").innetHtlm = TextBlog;
 	
-}
+
 
 

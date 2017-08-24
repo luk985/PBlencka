@@ -196,7 +196,7 @@ body
         
         .imageSliderHidden
         {
-            height: 600px;
+            max-width: 100%;
             position: absolute;
             overflow:hidden;
             visibility: hidden;
@@ -220,12 +220,38 @@ body
     margin-right: 20px auto;
 	width: 70%;
 	height: auto;
-	background: RED;
+	background: WHITE;
 	}
+	
+	    #MainTopicImage
+        {
+            margin-top: 20px;
+            position: relative;   
+        }
+        
+        .TopicImage
+        {
+            max-width: 100%;
+            max-height: 100%;
+            position: relative;
+            border-radius: 3%;
+            margin: auto;
+            left:0;
+            right:0;
+        }
+        
+        #TextBlogTopic
+        {
+            height: 300px;
+            position: relative;
+            background: WHITE;   
+        }
+        
+
 	
 	#information
 	{
-	margin-left: 20px auto;
+	
 	float:left;
 	width: 30%;
 	height: auto;
@@ -254,13 +280,14 @@ body
         
        	#AboutMeText
     	{
-    	margin-top: 10px;
-    	text-align:center;
-        height: 200 px; /* wysokoœæ kontenera */
-        font-family: "Monotype Corsiva";
-        color: black;
-        font-size: 16px;
-        line-height: 150%;
+    	   margin-left: 10px;
+    	   margin-top: 10px;
+    	   text-align:center;
+           height: 200 px; /* wysokoï¿½ï¿½ kontenera */
+           font-family: "Monotype Corsiva";
+           color: black;
+           font-size: 16px;
+           line-height: 150%;
     	}
      
      

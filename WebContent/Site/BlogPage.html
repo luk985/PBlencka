@@ -5,8 +5,9 @@
         <link rel="stylesheet" href="BlogPageLook.css" type="text/css"/>
         <link rel="stylsheet" href="BlogPage.js"/>
         <title>Patrycja Blencka - Blog</title>
+        <script src="https://www.w3schools.com/lib/w3.js"></script>
         <script src="../Library/jquery-3.2.1.min.js"></script>
-        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+        
         <script src=BlogPage.js>
         
         
@@ -45,8 +46,8 @@
             	 </div>
             </div>
             <div id="firstSlider">
-                <div id="leftHolder"><img onClick="slide(-1)" class="left" src="../Image/signLeft.png"/></div>
-                <div id="rightHolder"><img onClick="slide(1)" class="right" src="../Image/signRight.png"/></div>
+                <div id="leftHolder"><img onClick="slide(-1)" class="left" src="../Image/signLeft2.png"/></div>
+                <div id="rightHolder"><img onClick="slide(1)" class="right" src="../Image/signRight2.png"/></div>
                 <div id="imageSlider">
                     <script>
                     	ReadImage();
@@ -55,12 +56,14 @@
             </div>
             <div id = "textAndInformation">
             	<div id = "textBlog">
-            		<p>text1</p>
-
+                    <div id="MainTopicImage">
+                    </div>
+                    <div id="TextBlogTopic">
+                      
+                    </div>
             	</div>
-            	            		<script>
-            			ReadText();
-                    </script>
+
+
 
             	<div id = "information">
             		<div id="logoBlogTekst1">
@@ -76,5 +79,8 @@
             </div>
 
         </div>
+                            <script>
+                        ReadText();
+                    </script>
     </body>
 </html>
