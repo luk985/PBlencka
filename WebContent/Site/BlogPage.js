@@ -97,15 +97,27 @@ function ReadText(){
 	
 	//$("#textBlogTopic").load("FirstPage.html");
 	
-	
+	jQuery.get('../Threads/1.txt', function(txt){
+		$('#TextBlogTopic').text(txt);
+	})
 	
 }	
 
+/*
+$get('../Threads/1.txt', function(data) {
+	alert(data);
+})
+*/
+
+
+/*
 $(document).ready(function(){
 	$.get("header.html", function(data){
 		$("#header").html(data);	
 	});
 });
+
+*/
 	
 	/*
 	var txtFile = "../Threads/1.txt";
