@@ -97,7 +97,7 @@ function ReadText(){
 	
 	//$("#textBlogTopic").load("FirstPage.html");
 	
-	jQuery.get('../Threads/1.txt', function(txt){
+	jQuery.get('../Threads/5.txt', function(txt){
 		$('#TextBlogTopic').text(txt);
 	})
 	
