@@ -95,9 +95,9 @@ function ReadText(){
 	newImg.setAttribute("class", "TopicImage");
 	document.getElementById("MainTopicImage").appendChild(newImg);
 	
-	//$("#textBlogTopic").load("FirstPage.html");
+	$("#textBlogTopic").load("FirstPage.html");
 	
-	jQuery.get('../Threads/5.txt', function(txt){
+	jQuery.get('../Threads/1.txt', function(txt){
 		$('#TextBlogTopic').text(txt);
 	})
 	
