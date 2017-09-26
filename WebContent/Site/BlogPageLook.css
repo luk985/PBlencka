@@ -22,23 +22,21 @@ body
 #centered
 {
 	margin: 0px auto; /*wyśrodkowanie elementu*/
-	width: 1039px; /*ustawienie sztywnej szerokości kontenera*/
+	width: 100% /*ustawienie sztywnej szerokości kontenera*/
 	height: 2000px;
 }
     /* --- Nagłówek strony z podstawowywmi odnośnikami --- */ 
     
     #menu
     {
-	    margin-right: 0px auto;
-        margin-left: 0px auto;
+        margin-left: 20%;
         height: 35px; /* wysokość kontenera */
         position: relative; /* pozycja relatywna */
-        background: WHITE;
     }
         
         #menu_left1 h1
         {
-            text-align:left;
+            text-align: centered;
             float: left;
             height: 35px; /* wysokość kontenera */
             font-family: "Monotype Corsiva";
@@ -49,7 +47,7 @@ body
         }
         #menu_left2 h1
         {
-            text-align:left;
+            text-align: centered;
             float: left;
             height: 35px; /* wysokość kontenera */
             font-family: "Monotype Corsiva";
@@ -60,7 +58,7 @@ body
         }
         #menu_left3 h1
         {
-            text-align:left;
+            text-align: centered;
             float: left;
             height: 35px; /* wysokość kontenera */
             font-family: "Monotype Corsiva";

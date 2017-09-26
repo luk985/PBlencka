@@ -4,7 +4,7 @@ if (typeof jQuery == 'undefined') {
 	console.log("jQuery load");
 
 
-var LastNumberOfThreads = 5; //Numer ostatniego wprowadzonego tematu
+var LastNumberOfThreads = 9; //Numer ostatniego wprowadzonego tematu
 var timeChangeSlide = 600;
 
 
@@ -21,7 +21,7 @@ function ReadImage()
 for(var i=imageSlider.length; i>=1; i--){
 	
 	var newImg 	= document.createElement("img");
-	newImg.setAttribute("src", "../Threads/"+ i +".jpg");
+	newImg.setAttribute("src", "../Threads/"+ (LastNumberOfThreads-i) +".jpg");
 	
 	if(i<imageSlider.length)
 		newImg.setAttribute("class", "imageSliderHidden");
@@ -30,7 +30,7 @@ for(var i=imageSlider.length; i>=1; i--){
 	document.getElementById("imageSlider").appendChild(newImg);
 	
 	console.log(i);
-	console.log(imageSlider[i-1]);
+	console.log(LastNumberOfThreads-i);
 }
 }
 
@@ -87,7 +87,7 @@ window.setInterval(function slideA()
 },10000)
 
 
-function ReadText(){
+function LoadingRecentPosts(){
 	console.log("../Threads/" + imageSlider.length +".txt");
 	
 	var newImg 	= document.createElement("img");
@@ -97,46 +97,10 @@ function ReadText(){
 	
 	$("#textBlogTopic").load("FirstPage.html");
 	
-	jQuery.get('../Threads/1.txt', function(txt){
-		$('#TextBlogTopic').text(txt);
-	})
+	$("#TextBlogTopic").load("../Threads/Topic1.html #Heading");
 	
 }	
 
-/*
-$get('../Threads/1.txt', function(data) {
-	alert(data);
-})
-*/
-
-
-/*
-$(document).ready(function(){
-	$.get("header.html", function(data){
-		$("#header").html(data);	
-	});
-});
-
-*/
-	
-	/*
-	var txtFile = "../Threads/1.txt";
-	var file = new File([""], txtFile);
-	file.open("r");
-	var str = "";
-	while(!file.eof) {
-		str += file.readln() + "\n";
-	}
-	file.close();
-	alert(str);
-	*/
-	
-	//newImg.setAttribute("class", "imageSliderHidden");
-	
-	//var TextBlog = loadStrings("../Threads/" + imageSlider.length +".txt");
-	//$("#textBlog").load("FirstPage.html");
-	
-	//document.getElementById("TextBlog").getElementsByTagName("p").innetHtlm = TextBlog;
 	
 
 
