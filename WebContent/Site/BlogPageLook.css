@@ -220,10 +220,9 @@ body
     margin-right: 20px auto;
 	width: 70%;
 	height: auto;
-	background: WHITE;
 	}
 	
-	    #MainTopicImage
+	    .MainTopicImage
         {
             margin-top: 20px;
             position: relative;   
@@ -240,11 +239,18 @@ body
             right:0;
         }
         
-        #TextBlogTopic
+        .TextBlogTopic
         {
-            height: 300px;
-            position: relative;
-            background: WHITE;   
+            height: 500px;
+            position: relative;  
+        }
+        
+        .Heading
+        {
+           font-family: "Monotype Corsiva";
+           color: black;
+           font-size: 16px;
+           line-height: 150%;
         }
         
 

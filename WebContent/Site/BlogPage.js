@@ -86,18 +86,43 @@ window.setInterval(function slideA()
 	});
 },10000)
 
-
+//Wczytywania postów
 function LoadingRecentPosts(){
-	console.log("../Threads/" + imageSlider.length +".txt");
 	
-	var newImg 	= document.createElement("img");
-	newImg.setAttribute("src", "../Threads/"+ LastNumberOfThreads +".jpg");
-	newImg.setAttribute("class", "TopicImage");
-	document.getElementById("MainTopicImage").appendChild(newImg);
+	for (var i=LastNumberOfThreads; i>=(LastNumberOfThreads-5); i--)
+		{
+		
+		//Tworzenie tekstu pod obrazkiem
+		var newDiv = document.createElement("div");
+		newDiv.setAttribute("id", "TextBlogTopic"+i);
+		newDiv.setAttribute("class", "TextBlogTopic");
+		document.getElementById("textBlog").appendChild(newDiv);
+		$("#textBlogTopic"+i).load("FirstPage.html");
+		
+		var newDiv2 = document.createElement("div");
+		newDiv2.setAttribute("id", "MainTopicImage"+i);
+		newDiv2.setAttribute("class", "MainTopicImage");
+		document.getElementById("TextBlogTopic"+i).appendChild(newDiv2);
+		
+		//Dodanie obrazka do tematu
+		var newImg 	= document.createElement("img");
+		newImg.setAttribute("src", "../Threads/"+ i +".jpg");
+		newImg.setAttribute("class", "TopicImage");
+		document.getElementById("MainTopicImage"+i).appendChild(newImg);
+		
+		//Dodanie tytułu i treść tematu
+		var newHeading = document.createElement("p");
+		newHeading.setAttribute("id", "Heading"+i);
+		newHeading.setAttribute("class", "Heading");
+		//document.getElementById("textBlogTopic"+i).appendChild(newHeading);
+		//$("#Heading"+i).load("../Threads/Topic1.html #Heading");
+		}
 	
-	$("#textBlogTopic").load("FirstPage.html");
 	
-	$("#TextBlogTopic").load("../Threads/Topic1.html #Heading");
+	
+	
+	
+	
 	
 }	
 
