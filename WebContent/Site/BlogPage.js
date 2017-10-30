@@ -92,12 +92,11 @@ function LoadingRecentPosts(){
 	for (var i=LastNumberOfThreads; i>=(LastNumberOfThreads-5); i--)
 		{
 		
-		//Tworzenie tekstu pod obrazkiem
+		//Tworzenie kontenera tematu
 		var newDiv = document.createElement("div");
 		newDiv.setAttribute("id", "TextBlogTopic"+i);
 		newDiv.setAttribute("class", "TextBlogTopic");
 		document.getElementById("textBlog").appendChild(newDiv);
-		$("#textBlogTopic"+i).load("FirstPage.html");
 		
 		var newDiv2 = document.createElement("div");
 		newDiv2.setAttribute("id", "MainTopicImage"+i);
@@ -114,8 +113,8 @@ function LoadingRecentPosts(){
 		var newHeading = document.createElement("p");
 		newHeading.setAttribute("id", "Heading"+i);
 		newHeading.setAttribute("class", "Heading");
-		//document.getElementById("textBlogTopic"+i).appendChild(newHeading);
-		//$("#Heading"+i).load("../Threads/Topic1.html #Heading");
+		document.getElementById("TextBlogTopic"+i).appendChild(newHeading);
+		$("#Heading"+i).load("../Threads/Topic" + 9 + ".html #Heading");
 		}
 	
 	
