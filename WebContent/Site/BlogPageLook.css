@@ -10,6 +10,12 @@
     src: url(CookieRegular.ttf) format("truetype");
 }
 
+@font-face
+{
+    font-family: MyRoboto;
+    src: url(Roboto-Regular.ttf) format("truetype");
+}
+
 *{
     margin: 0px;
     padding: 0px;
@@ -147,6 +153,33 @@ body
             
         }
         
+        #HeaddingTopicDiv
+        {
+            top: 40%;
+            height: 150px;
+            width: 450px;
+            background-color: #87CEFA;
+            position: relative;
+            z-index:2;
+            margin: 0 auto;
+        }
+        
+        .HeaddingTopicText
+        {
+            visibility: visible;
+            font-size: 20px;
+            color: #313131;
+            line-height: 150%;
+            font-family: MyRoboto;
+            z-index:3;
+        }
+        
+        .HeaddingTopicTextHidden
+        {
+            visibility: hidden;
+            z-index:3;
+        }
+        
 
         #leftHolder
         {
@@ -236,31 +269,64 @@ body
 	    .MainTopicImage
         {
             margin-top: 20px;
-            position: relative;   
+            position: relative;  
         }
         
         .TopicImage
         {
-            max-width: 100%;
-            max-height: 100%;
-            position: relative;
-            border-radius: 3%;
-            margin: auto;
-            left:0;
-            right:0;
+            
+            height: 450px;
+            width: 100%;
+            object-fit: cover;
+            
         }
         
         .TextBlogTopic
         {
-            height: 500px;
+            height: 700px;
             position: relative;
+            outline: 1px solid #DDDDDD;
+            margin-top: 40px;
         }
         
         .Heading p
         {  
-           color: black;
-           font-size: 26px;
+           font-size: 20px;
+           color: #313131;
            line-height: 150%;
+           font-family: MyRoboto;
+           margin-left: 30px;
+           
+        }
+        
+        .DateTopic p
+        {  
+           font-size: 14px;
+           color: #888888;
+           font-family: MyRoboto;
+           margin-left: 30px;
+           margin-top: 20px;
+        }
+        
+        .Line
+        {
+            background-color: #87CEFA;
+            width: 100px;
+            height: 1px;
+            margin-left: 30px;
+            margin-top: 15px;
+            text-align: left;
+            
+        }
+        
+        .Topic p
+        {  
+           font-size: 16px;
+           color: #313131;
+           line-height: 150%;
+           font-family: MyRoboto;
+           margin-left: 30px;
+           margin-top: 20px;
         }
         
 
@@ -296,13 +362,14 @@ body
         
        	#AboutMeText p
     	{
-    	   margin-left: 10px;
+    	   margin-left: 30px;
     	   margin-top: 10px;
-    	   text-align:center;
-           height: 200 px; /* wysoko�� kontenera */
+    	   text-align: center;
+           height: 200px; /* wysokość kontenera */
            color: black;
            font-size: 16px;
            line-height: 150%;
+           font-family: MyRoboto;
     	}
      
      
