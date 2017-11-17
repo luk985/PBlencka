@@ -158,10 +158,11 @@ body
             top: 40%;
             height: 150px;
             width: 450px;
-            background-color: #87CEFA;
+            background-color: white;
             position: relative;
             z-index:2;
-            margin: 0 auto;
+            margin: 0px auto;
+            opacity: 0.4;
         }
         
         .HeaddingTopicText
@@ -172,6 +173,14 @@ body
             line-height: 150%;
             font-family: MyRoboto;
             z-index:3;
+            position: absolute;
+            top: 15px;
+            font-size: 25px;
+            color: #313131;
+            line-height: 150%;
+            font-family: MyRoboto;
+            left: 25%;
+               
         }
         
         .HeaddingTopicTextHidden
