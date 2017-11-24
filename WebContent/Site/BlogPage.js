@@ -4,9 +4,9 @@ if (typeof jQuery == 'undefined') {
 	console.log("jQuery load");
 
 
-var LastNumberOfThreads = 9; //Numer ostatniego wprowadzonego tematu
+var LastNumberOfThreads = 6; //Numer ostatniego wprowadzonego tematu
 var timeChangeSlide = 600;
-var LoadTopic = 5;
+var LoadTopic = 5; //Ilość wczytywanych tematów
 var HeadingTopic = [5];
 
 
@@ -47,28 +47,26 @@ console.log("imagecount: " + imagecount);
 var timer1=2000;
 
 
-//Wczytywanie nagłówka do obrazka
+//Wczytywanie nagłówka do pokazów slajdów
 function HeaddingTopic()
 {
 	var AddHeaddingTopic = document.createElement("div");
 	AddHeaddingTopic.setAttribute("id", "HeaddingTopicDiv");
-	//AddHeaddingTopic.addEventListener("mouseover", OpacityNormal);
-	//AddHeaddingTopic.addEventListener("mouseout", Opacity4);
 	document.getElementById("imageSlider").appendChild(AddHeaddingTopic);
-
 	
 	for(var i=imageSlider.length; i>=0; i--)
 	{
 		var newHeading = document.createElement("a");
 		newHeading.setAttribute("id", "HeaddingTopicText");
-		newHeading.setAttribute("href", "../Threads/Topic" + (imageSlider.length+(imageSlider.length-i)-1) + ".html");
+		newHeading.setAttribute("href", "../Threads/Topic" + (LastNumberOfThreads-i) + ".html");
 		if(i<imageSlider.length)
 			newHeading.setAttribute("class", "HeaddingTopicTextHidden");
 		else newHeading.setAttribute("class", "HeaddingTopicText");
 		
 		document.getElementById("HeaddingTopicDiv").appendChild(newHeading);
 
-		$("#HeaddingTopicDiv").children().eq(imageSlider.length-i).load("../Threads/Topic" + (imageSlider.length+(imageSlider.length-i)-1) + ".html #Heading");
+		//$("#HeaddingTopicDiv").children().eq(imageSlider.length-i).load("../Threads/Topic" + (imageSlider.length+(imageSlider.length-i)-1) + ".html #Heading");
+		$("#HeaddingTopicDiv").children().eq(imageSlider.length-i).load("../Threads/Topic" + (LastNumberOfThreads-i) + ".html #Heading");
 		
 
 	}	
@@ -81,14 +79,12 @@ function HeaddingTopic()
 //Zmiana przejrzystości nagłówka
 function OpacityNormal()
 {
-	//document.getElementById("HeaddingTopicDiv").setAttribute("style", "opacity: 0.8");
 	$("#HeaddingTopicDiv").fadeTo(1000,0.8);
 	console.log("Funkcja wywołana");
 }
 
 function Opacity4()
 {
-	//document.getElementById("HeaddingTopicDiv").setAttribute("style", "opacity: 0.3");
 	$("#HeaddingTopicDiv").fadeTo(1000,0.3);
 	console.log("Funkcja wyłączona");
 }
