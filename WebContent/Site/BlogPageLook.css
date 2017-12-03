@@ -16,6 +16,12 @@
     src: url(Roboto-Regular.ttf) format("truetype");
 }
 
+@font-face
+{
+    font-family: MyRobotoLight;
+    src: url(Roboto-Light.ttf) format("truetype");
+}
+
 *{
     margin: 0px;
     padding: 0px;
@@ -35,19 +41,19 @@ body
 {
 	margin: 0px auto; /*wyśrodkowanie elementu*/
 	width: 100%;
-	height: 2000px;
+	margin-bottom: 200px;
 }
     /* --- Nagłówek strony z podstawowywmi odnośnikami --- */ 
     
     #menu
     {
         width: 100%;
-        padding-left: 5%;
         height: 35px; /* wysokość kontenera */
     }
         
-        #menu_left1 h1
+        #menu_left1 a
         {
+            padding-left: 5%;
             text-align: centered;
             float: left;
             height: 35px; /* wysokość kontenera */
@@ -57,7 +63,7 @@ body
             font-size: 35px;
             margin-right: 5px;
         }
-        #menu_left2 h1
+        #menu_left2 a
         {
             text-align: centered;
             float: left;
@@ -68,7 +74,7 @@ body
             font-size: 35px;
             margin-right: 5px;
         }
-        #menu_left3 h1
+        #menu_left3 a
         {
             text-align: centered;
             float: left;
@@ -125,7 +131,7 @@ body
         {
             display: inline;
             font-family: MyCookie;
-            color: black;
+            color: #CC0033;
             margin-right: 10px;
             font-size: 70px;
         }
@@ -183,37 +189,40 @@ body
         {
             top: 40%;
             height: 150px;
-            width: 450px;
+            width: 600px;
             background-color: white;
             position: relative;
             z-index:2;
             margin: 0px auto;
             opacity: 0.4;
         }
-        
+
         .HeaddingTopicText
-        {
-            visibility: visible;
-            font-size: 20px;
-            color: #313131;
-            line-height: 150%;
-            font-family: MyRoboto;
-            z-index:3;
+        {  
             position: absolute;
-            top: 15px;
-            font-size: 25px;
+            top: 30%;
+            visibility: visible;
+            right: 0px;
+            left: 0px;
+            z-index:3;
+   
+        }
+        
+        .HeaddingTopicText p
+        {  
             color: #313131;
-            line-height: 150%;
+            z-index:3;
+            font-size: 30px;
             font-family: MyRoboto;
-            left: 25%;
-               
+            text-align: center;   
+            font-weight: bold;
         }
         
         .HeaddingTopicTextHidden
         {
             visibility: hidden;
-            z-index:3;
         }
+
         
 
         #leftHolder
@@ -265,7 +274,6 @@ body
             position: absolute;
             overflow:hidden;
             visibility: visible;
-            margin: auto;
             left:0;
             right:0;
             z-index:1;
@@ -278,7 +286,6 @@ body
             position: absolute;
             overflow:hidden;
             visibility: hidden;
-            margin: auto;
             left:0;
             right:0;
             z-index:1;
@@ -290,14 +297,16 @@ body
 	{
 	margin: 0px auto; /*wyśrodkowanie elementu*/
 	height: auto;
-	width: 1170px;
+	width: 90%;
+	
 	}
 	
 	#textBlog
 	{
 	float:left;
     margin-right: 20px auto;
-	width: 70%;
+	width: 65%;
+	padding-left: 5%;
 	height: auto;
 	}
 	
@@ -331,7 +340,6 @@ body
            line-height: 150%;
            font-family: MyRoboto;
            margin-left: 30px;
-           
         }
         
         .DateTopic p
@@ -359,7 +367,7 @@ body
            font-size: 16px;
            color: #313131;
            line-height: 150%;
-           font-family: MyRoboto;
+           font-family: MyRobotoLight;
            margin-left: 30px;
            margin-top: 20px;
         }
@@ -378,14 +386,20 @@ body
         #AboutMe
         {
             
-            margin-top: 50px;
+            margin-top: 25px;
             text-align:center;
             height: 200 px; /* wysokość kontenera */
-            font-family: MyRoboto;
             color: black;
-            font-size: 26px;
+            font-size: 40px;
             line-height: 150%;
             
+        }
+        
+        #AboutMe p
+        {
+            font-family: MyCookie;
+            /*font-weight: bold;*/
+            /*font-style: Italic;*/
         }
 
 
@@ -393,8 +407,8 @@ body
     	{
         	
         	position: relative;
-        	top: 20px;
-        	height: 200px; /* wysokość kontenera */
+        	top: 10px;
+        	height: 450px; /* wysokość kontenera */
         	
     	}
     	
@@ -402,8 +416,8 @@ body
         {
             right: 0px;
             left: 0px;
-            height: 175px;
-            border-radius: 50%;
+            height: 400px;
+            border-radius: 10%;
             display: block;
     		margin-left: auto;
     		margin-right: auto
@@ -412,13 +426,14 @@ body
        	#AboutMeText p
     	{
     	   margin-left: 30px;
+    	   margin-right: 20px;
     	   margin-top: 10px;
     	   text-align: justify;
            height: 200px; /* wysokość kontenera */
            color: black;
            font-size: 16px;
            line-height: 150%;
-           font-family: MyRoboto;
+           font-family: MyRobotoLight;
     	}
      
      

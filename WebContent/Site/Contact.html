@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Patrycja Blencka - Blog</title>
+        <link rel="stylesheet" href="../Site/BlogPageLook.css" type="text/css"/>
+        <link rel="stylesheet" href="Contact.css" type="text/css"/>
+        <link rel="stylesheet" href="wait.js"/>
+        <script src="wait.js"></script>   
+        <script src="../Library/jquery-3.2.1.min.js"></script>
+   </head>
+
+<body onload="wait()">
+    <div id="centered">
+        <div id="menutopic"></div>
+        <div id="logoBlog">
+            <div id="logoBlog1"></div>
+            <div id="logoBlog2"></div>
+        </div>
+            <script>
+            $("#menutopic").load("../Site/BlogPage.html #menu");
+            $("#logoBlog1").load("../Site/BlogPage.html #logoBlogTekst1");
+            $("#logoBlog2").load("../Site/BlogPage.html #logoBlogTekst2");
+            
+        </script>
+    </div>            
+            
+    <div id="themeContent" class="themeContentText">
+        <div id="Line" class="line"></div>
+        <p id="Heading">KONTAKT</p>
+        <br/>
+        <p>Jeśli masz ochotę umówić się na coaching, pisz na adres:</p>
+        <br/>
+        <a href="mailto:patrycja.blencka@pl" class="themeContentText">patrycja.blencka@pl</a>
+        <br/>
+        <br/>
+        <br/>
+        <p>Możesz też skontaktować się ze mną za pomocą Facebooka:</p>
+        <br/>
+        <a href="https://web.facebook.com/Patrycja-Blencka-Life-Coaching-1118804531596305/" class="themeContentText">Patrycja Blencka - Life Coaching</a>
+        
+				
+    </div>
+    <div id="signature">
+        <p>Patrycja Blencka</p>
+    </div>
+              
+</body>

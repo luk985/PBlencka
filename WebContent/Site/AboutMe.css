@@ -22,17 +22,27 @@ body
 }
 
 
-#centeredTopic
+#centered
 {
 	margin: 0px auto; /*wyśrodkowanie elementu*/
 	width: 100%;
 }
 
-#imageTopic
+#image
 {
 	height: 600px;
-    margin: auto;
+    margin: 0 auto;
     overflow:hidden;
+    text-align: center;
+}
+
+#image img
+{
+    height: 95%;
+    overflow:hidden;
+    position: relative;
+    margin: 0 auto;
+    filter: drop-shadow(15px 12px 15px grey);
 }
 
 #themeContent
@@ -40,12 +50,6 @@ body
 	width: 800px;
 	margin: 0px auto; /*wyśrodkowanie elementu*/
 	line-height: 185%;
-}
-
-#DateTopic
-{
-	color: Gray;
-	margin-top: 5px;
 }
 
 #Heading
@@ -63,6 +67,7 @@ body
     font-size: 16px;
     font-family: MyRobotoLight;
     text-align: justify;
+    color: #696969;
 }
 
 .themeContentText h1
@@ -79,7 +84,7 @@ body
     margin-bottom: 65px;
     text-align: right;
     font-size: 30px;
-    opacity: 0; 	
+    opacity: 0;	
 }
 
 #signature p

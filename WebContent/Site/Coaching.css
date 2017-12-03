@@ -1,0 +1,180 @@
+@font-face
+{
+    font-family: MyCookie;
+    src: url(CookieRegular.ttf) format("truetype");
+}
+
+@font-face
+{
+    font-family: MyRoboto;
+    src: url(Roboto-Regular.ttf) format("truetype");
+}
+
+@font-face
+{
+    font-family: MyRobotoLight;
+    src: url(Roboto-Light.ttf) format("truetype");
+}
+
+body
+{
+     
+}
+
+
+#centered
+{
+	margin: 0px auto; /*wyśrodkowanie elementu*/
+	width: 100%;
+	
+}
+
+#themeContent
+{
+	width: 900px;
+	margin: 0px auto; /*wyśrodkowanie elementu*/
+	line-height: 185%;
+	text-align: justify;
+	
+}
+
+#Heading
+{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: MyRoboto;
+    font-size: 36px;
+    font-weight: bold;
+    color: #696969;
+}
+
+#line
+{
+    text-align: center;
+    width: 100%;	
+}
+
+.line
+{
+	background-color: #CC0033;
+	height: 1px;
+}
+
+
+.themeContentText p, li
+{
+    font-size: 16px;
+    font-family: MyRobotoLight;
+    color: #696969;
+}
+.themeContentText a 
+{
+    font-size: 16px;
+    font-family: MyRobotoLight;
+    color: #CC0033;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #696969;
+}
+
+#image
+{
+    height: 170px;
+    float: left;
+    margin-bottom: 100px;
+}
+#image h1
+{
+    text-align: center;
+    color: #696969;
+    
+}
+
+#image img
+{
+    height: 100%;
+    text-align: left;
+    
+}
+
+#description2
+{
+    height: 400px;
+    width: 33%;
+    float: left;
+    text-align: center;
+    margin-bottom: 40px;
+    
+}
+
+#description2 h1
+{
+    text-align: center;
+    color: #696969;
+    
+}
+
+#description2 p
+{
+    text-align: center;
+}
+
+#image2
+{
+    height: 200px;
+    text-align: center;
+}
+
+#image2 img
+{
+    height: 100%;
+    text-align: center;
+}
+
+#imageRight
+{
+    height: 150px;
+    float: left;
+    margin-left: 15px;
+    margin-right: 15px;
+    
+}
+
+#imageRight img
+{
+    height: 30px;
+    text-align: center;
+    position: relative;
+    top: 35%;
+}
+
+
+.themeContentText h1
+{
+    font-size: 20px;
+    font-family: MyRobotoLight;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+#signature
+{
+    width: 800px;
+    margin: 0px auto; /*wyśrodkowanie elementu*/
+    margin-top: 120px;
+    margin-bottom: 65px;
+    text-align: right;
+    padding-right: 300px;
+    font-size: 30px;
+    opacity: 0;	
+}
+
+#signature p
+{
+	font-family: MyCookie;
+	font-style: Italic;
+	letter-spacing: 1px;
+}
+         

@@ -22,17 +22,25 @@ body
 }
 
 
-#centeredTopic
+#centered
 {
 	margin: 0px auto; /*wyśrodkowanie elementu*/
 	width: 100%;
 }
 
-#imageTopic
+#image
 {
 	height: 600px;
     margin: auto;
     overflow:hidden;
+}
+
+#image img
+{
+    height: 100%;
+    overflow:hidden;
+    left: 0px;
+    right: 0px;
 }
 
 #themeContent
@@ -40,12 +48,6 @@ body
 	width: 800px;
 	margin: 0px auto; /*wyśrodkowanie elementu*/
 	line-height: 185%;
-}
-
-#DateTopic
-{
-	color: Gray;
-	margin-top: 5px;
 }
 
 #Heading
@@ -56,6 +58,7 @@ body
     font-family: MyRoboto;
     font-size: 36px;
     font-weight: bold;
+    color: #313030;
 }
 
 .themeContentText p, li
@@ -63,6 +66,7 @@ body
     font-size: 16px;
     font-family: MyRobotoLight;
     text-align: justify;
+    color: #696969;
 }
 
 .themeContentText h1
@@ -79,7 +83,7 @@ body
     margin-bottom: 65px;
     text-align: right;
     font-size: 30px;
-    opacity: 0; 	
+    opacity: 0;	
 }
 
 #signature p

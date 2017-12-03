@@ -22,17 +22,26 @@ body
 }
 
 
-#centeredTopic
+#centered
 {
 	margin: 0px auto; /*wyśrodkowanie elementu*/
 	width: 100%;
 }
 
-#imageTopic
+#image
 {
 	height: 600px;
-    margin: auto;
+    margin: 0 auto;
     overflow:hidden;
+    text-align: center;
+}
+
+#image img
+{
+    height: 100%;
+    overflow:hidden;
+    position: relative;
+    margin: 0 auto;
 }
 
 #themeContent
@@ -40,17 +49,12 @@ body
 	width: 800px;
 	margin: 0px auto; /*wyśrodkowanie elementu*/
 	line-height: 185%;
-}
-
-#DateTopic
-{
-	color: Gray;
-	margin-top: 5px;
+	text-align: center;
 }
 
 #Heading
 {
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 30px;
     text-align: center;
     font-family: MyRoboto;
@@ -58,28 +62,46 @@ body
     font-weight: bold;
 }
 
+#line
+{
+    text-align: center;
+    width: 100%;	
+}
+
+.line
+{
+	background-color: #CC0033;
+	height: 1px;
+}
+
+
 .themeContentText p, li
 {
     font-size: 16px;
     font-family: MyRobotoLight;
-    text-align: justify;
+
 }
 
-.themeContentText h1
+.themeContentText a 
 {
-    font-size: 20px;
+    font-size: 16px;
     font-family: MyRobotoLight;
+    color: #CC0033;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
+
 
 #signature
 {
     width: 800px;
     margin: 0px auto; /*wyśrodkowanie elementu*/
-    margin-top: 35px;
+    margin-top: 120px;
     margin-bottom: 65px;
     text-align: right;
+    padding-right: 300px;
     font-size: 30px;
-    opacity: 0; 	
+    opacity: 0;	
 }
 
 #signature p

@@ -65,28 +65,25 @@ function HeaddingTopic()
 		
 		document.getElementById("HeaddingTopicDiv").appendChild(newHeading);
 
-		//$("#HeaddingTopicDiv").children().eq(imageSlider.length-i).load("../Threads/Topic" + (imageSlider.length+(imageSlider.length-i)-1) + ".html #Heading");
 		$("#HeaddingTopicDiv").children().eq(imageSlider.length-i).load("../Threads/Topic" + (LastNumberOfThreads-i) + ".html #Heading");
 		
 
 	}	
 	
-	document.getElementById("imageSlider").addEventListener("mouseover", OpacityNormal);
-	document.getElementById("imageSlider").addEventListener("mouseout", Opacity4);
+	document.getElementById("firstSlider").addEventListener("mouseover", OpacityNormal);
+	document.getElementById("firstSlider").addEventListener("mouseout", Opacity4);
 	
 }
 
 //Zmiana przejrzystości nagłówka
 function OpacityNormal()
 {
-	$("#HeaddingTopicDiv").fadeTo(1000,0.8);
-	console.log("Funkcja wywołana");
+	$("#HeaddingTopicDiv").fadeTo(1500,0.8);
 }
 
 function Opacity4()
 {
-	$("#HeaddingTopicDiv").fadeTo(1000,0.3);
-	console.log("Funkcja wyłączona");
+	$("#HeaddingTopicDiv").fadeTo(1500,0.3);
 }
 
 
