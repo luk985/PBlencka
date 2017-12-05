@@ -4,9 +4,9 @@ if (typeof jQuery == 'undefined') {
 	console.log("jQuery load");
 
 
-var LastNumberOfThreads = 6; //Numer ostatniego wprowadzonego tematu
+var LastNumberOfThreads = 2; //Numer ostatniego wprowadzonego tematu
 var timeChangeSlide = 600;
-var LoadTopic = 5; //Ilość wczytywanych tematów
+var LoadTopic = 2; //Ilość wczytywanych tematów
 var HeadingTopic = [5];
 
 
@@ -21,19 +21,18 @@ var imageSlider = [
 //Ładowanie obrazów do pokazów slajdów
 function ReadImage()
 {
-	for(var i=imageSlider.length; i>=0; i--){
+	for(var i=(LoadTopic-1); i>=0; i--){
 		
 		var newImg 	= document.createElement("img");
 		newImg.setAttribute("src", "../Threads/"+ (LastNumberOfThreads-i) +".jpg");
 		
-		if(i<imageSlider.length)
+		if(i<(LoadTopic-1))
 			newImg.setAttribute("class", "imageSliderHidden");
 		else newImg.setAttribute("class", "imageSlider");
 		
 		document.getElementById("imageSlider").appendChild(newImg);
 		
-		console.log(i);
-		console.log(LastNumberOfThreads-i);
+
 	}
 	HeaddingTopic();
 }
@@ -54,18 +53,21 @@ function HeaddingTopic()
 	AddHeaddingTopic.setAttribute("id", "HeaddingTopicDiv");
 	document.getElementById("imageSlider").appendChild(AddHeaddingTopic);
 	
-	for(var i=imageSlider.length; i>=0; i--)
+	for(var i=(LoadTopic-1); i>=0; i--)
 	{
 		var newHeading = document.createElement("a");
 		newHeading.setAttribute("id", "HeaddingTopicText");
 		newHeading.setAttribute("href", "../Threads/Topic" + (LastNumberOfThreads-i) + ".html");
-		if(i<imageSlider.length)
+		if(i<(LoadTopic-1))
 			newHeading.setAttribute("class", "HeaddingTopicTextHidden");
 		else newHeading.setAttribute("class", "HeaddingTopicText");
 		
 		document.getElementById("HeaddingTopicDiv").appendChild(newHeading);
 
-		$("#HeaddingTopicDiv").children().eq(imageSlider.length-i).load("../Threads/Topic" + (LastNumberOfThreads-i) + ".html #Heading");
+		$("#HeaddingTopicDiv").children().eq(LoadTopic-i-1).load("../Threads/Topic" + (LastNumberOfThreads-i) + ".html #Heading");
+		
+		console.log("(LoadTopic+1)-i = " + (LoadTopic-i-1));
+
 		
 
 	}	
@@ -96,13 +98,13 @@ function slide(x)
 		selectImage[imagecount].className = "imageSliderHidden";
 		selectHeading[imagecount].className = "HeaddingTopicTextHidden";
 		imagecount = imagecount+x;
-		if(imagecount > imageSlider.length-1)
+		if(imagecount >(LoadTopic-1))
 		{
 			imagecount = 0;
 	    }
 	    if(imagecount < 0)
 	    {
-	    	imagecount = imageSlider.length-1;
+	    	imagecount = (LoadTopic-1);
 	    }
 	    selectImage[imagecount].className="imageSlider";
 	    selectHeading[imagecount].className = "HeaddingTopicText";
@@ -119,13 +121,13 @@ window.setInterval(function slideA()
 		selectImage[imagecount].className = "imageSliderHidden";
 		selectHeading[imagecount].className = "HeaddingTopicTextHidden";
 		imagecount++;
-		if(imagecount > imageSlider.length-1)
+		if(imagecount >(LoadTopic-1))
 		{
 			imagecount = 0;
 	    }
 	    if(imagecount < 0)
 	    {
-	    	imagecount = imageSlider.length-1;
+	    	imagecount = (LoadTopic-1);
 	    }
 	    selectImage[imagecount].className="imageSlider";
 	    selectHeading[imagecount].className = "HeaddingTopicText";
@@ -137,7 +139,7 @@ window.setInterval(function slideA()
 //Wczytywania postów
 function LoadingRecentPosts(){
 	
-	for (var i=LastNumberOfThreads; i>=(LastNumberOfThreads-LoadTopic); i--)
+	for (var i=LastNumberOfThreads; i>(LastNumberOfThreads-LoadTopic); i--)
 		{
 		
 		//Tworzenie kontenera tematu
@@ -161,6 +163,7 @@ function LoadingRecentPosts(){
 		var newHeading = document.createElement("a");
 		newHeading.setAttribute("id", "Heading"+i);
 		newHeading.setAttribute("class", "Heading");
+		newHeading.setAttribute("href", "../Threads/Topic" + i +".html");
 		//newHeading.addEventListener("mouseenter", function(){HighlightingTopic(this)});
 		document.getElementById("TextBlogTopic"+i).appendChild(newHeading);
 		$("#Heading"+i).load("../Threads/Topic" + i + ".html #Heading");

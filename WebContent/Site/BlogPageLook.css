@@ -268,10 +268,10 @@ body
         right: 10px;
         }
         
-        .imageSlider
+        #imageSlider img
         {
             height: 600px;
-            position: absolute;
+            position: relative;
             overflow:hidden;
             visibility: visible;
             left:0;
